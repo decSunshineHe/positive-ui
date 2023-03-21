@@ -41,8 +41,8 @@ export default defineConfig(() => {
             },
             lib: {
               entry: path.resolve(__dirname, "src/index.ts"),
-              name: "MaxtropyUI",
-              fileName: (format) => `maxtropy-ui.${format}.js`,
+              name: "PositiveUI",
+              fileName: (format) => `positive-ui.${format}.js`,
             },
           },
         },

@@ -3,8 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "main": "dist/maxtropy-components.umd.js",
-  "module": "dist/maxtropy-components.esm.js",
+  "main": "dist/positive-components.umd.js",
+  "module": "dist/positive-components.esm.js",
   "files": [
     "dist"
   ],
