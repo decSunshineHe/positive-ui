@@ -81,7 +81,9 @@ export default defineConfig(() => {
         // fix less import by: @import ~
         // less import no support webpack alias '~' · Issue #2185 · vitejs/vite
         { find: /^~/, replacement: "" },
+        { find: "@", replacement: path.resolve(__dirname, "src") },
       ],
+      extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"],
     },
     test: {
       environment: "happy-dom",
