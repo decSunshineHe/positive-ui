@@ -6,26 +6,14 @@ import react from "@vitejs/plugin-react";
 import decamelize from "decamelize";
 import { buildPlugin } from "vite-plugin-build";
 
-export const GLOBALS = {
+const GLOBALS = {
   react: "React",
   "react-dom": "ReactDOM",
   antd: "Antd",
-  classnames: "Classnames",
-  recharts: "Recharts",
-  "recharts-scale": "RechartsScale",
-  "business-utils": "BusinessUtils",
 };
 // 处理类库使用到的外部依赖
 // 确保外部化处理那些你不想打包进库的依赖
-export const EXTERNAL = [
-  "react",
-  "react-dom",
-  "antd",
-  "classnames",
-  "recharts",
-  "recharts-scale",
-  "business-utils",
-];
+const EXTERNAL = ["react", "react-dom", "antd"];
 
 // https://vitejs.dev/config/
 export default defineConfig(() => {
@@ -61,12 +49,12 @@ export default defineConfig(() => {
             if (match[2] !== "index") {
               prefixName += `-${match[2]}`;
             }
-            return `rabc-${decamelize(prefixName, {
+            return `positive-${decamelize(prefixName, {
               separator: "-",
             })}__${name}`;
           }
 
-          return `rabc-${name}`;
+          return `positive-${name}`;
         },
       },
       postcss: {},

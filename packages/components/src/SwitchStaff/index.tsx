@@ -1,8 +1,9 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import { ConfigProvider, Dropdown, Space, theme } from "antd";
 import styles from "./index.module.scss";
 import Icon from "@ant-design/icons";
-import CustomerSvg from "./CustomerSvg.tsx";
+import CustomerSvg from "./CustomerSvg";
+
 
 const SwitchStaff: FC = () => {
   return (

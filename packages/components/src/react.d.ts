@@ -1,4 +1,4 @@
-/// <reference types="react" />
+/// <reference types="react-jsx" />
 
 declare module "*.module.scss" {
   const classes: { readonly [key: string]: string };
