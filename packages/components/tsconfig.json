@@ -17,11 +17,7 @@
     "emitDeclarationOnly": true, // 只 emit 声明文件
     "declaration": true /* Generates corresponding '.d.ts' file. */,
     "declarationDir": "./es",
-    "jsx": "react-jsx",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "jsx": "react-jsx"
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
