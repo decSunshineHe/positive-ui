@@ -1,53 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import path from 'path';
-import decamelize from 'decamelize';
-
-// 在 UMD 构建模式下为外部依赖提供一个全局变量
-export const GLOBALS = {
-  react: 'React',
-  'react-dom': 'ReactDOM',
-  'react/jsx-runtime': 'JsxRuntime',
-  antd: 'Antd',
-  classnames: 'Classnames',
-  recharts: 'Recharts',
-  'recharts-scale': 'RechartsScale',
-  'business-utils': 'BusinessUtils',
-};
-// 处理类库使用到的依赖
-export const EXTERNAL = [
-  'react/jsx-runtime',
-  'react',
-  'react-dom',
-  'antd',
-  'classnames',
-  'recharts',
-  'recharts-scale',
-  'business-utils',
-];
-
-export const commonConfig = defineConfig({
-  plugins: [react()],
-  css: {
-    modules: {
-      localsConvention: 'camelCaseOnly',
-      generateScopedName: (name: string, filename: string) => {
-        const match = filename.replace(/\\/, '/').match(/.*\/src\/(.*)\/.*\.module\..*/);
-
-        if (match) {
-          return `rabc-${decamelize(match[1], '-')}__${name}`;
-        }
-
-        return `rabc-${name}`;
-      },
-    },
-    preprocessorOptions: {
-      less: {
-        javascriptEnabled: true,
-      },
-    },
-  },
-});
+import { defineConfig } from "vite";
+import path from "path";
+import { commonConfig } from "./common.config";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -75,6 +28,13 @@ export default defineConfig(({ mode }) => {
             indent: false,
             exports: 'named',
             format: 'es',
+            dir: undefined,
+          },
+          {
+            file: `lib/${mode.replace(/\.[jt]?sx?$/, '.js')}`,
+            indent: false,
+            exports: 'named',
+            format: 'cjs',
             dir: undefined,
           },
         ],
