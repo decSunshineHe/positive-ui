@@ -1,16 +1,15 @@
 import React, { FC } from "react";
 import { ConfigProvider, Dropdown, Space, theme } from "antd";
-import "./index.less";
+import styles from "./index.module.less";
 import Icon from "@ant-design/icons";
 import CustomerSvg from "./CustomerSvg";
-
 
 const SwitchStaff: FC = () => {
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
       <Space align="center">
-        <Icon component={CustomerSvg} className="customerSvg" />
-        <div className="tenantName">小何的租户</div>
+        <Icon component={CustomerSvg} className={styles.customerSvg} />
+        <div className={styles.tenantName}>小何的租户</div>
         <Dropdown
           overlayClassName={"overlay"}
           autoFocus
@@ -32,7 +31,7 @@ const SwitchStaff: FC = () => {
           }}
           trigger={["click"]}
         >
-          <span className={"switchTenant"}>切换</span>
+          <span className={styles.switchTenant}>切换</span>
         </Dropdown>
       </Space>
     </ConfigProvider>

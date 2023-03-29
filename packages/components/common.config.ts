@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import decamelize from "decamelize";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
 // 在 UMD 构建模式下为外部依赖提供一个全局变量
 export const GLOBALS = {
@@ -20,7 +21,7 @@ export const EXTERNAL = [
 ];
 
 export const commonConfig = defineConfig({
-  plugins: [react()],
+  plugins: [react(), cssInjectedByJsPlugin()],
   css: {
     modules: {
       localsConvention: "camelCaseOnly",
@@ -28,11 +29,9 @@ export const commonConfig = defineConfig({
         const match = filename
           .replace(/\\/, "/")
           .match(/.*\/src\/(.*)\/.*\.module\..*/);
-
         if (match) {
           return `positive-${decamelize(match[1], "-")}__${name}`;
         }
-
         return `positive-${name}`;
       },
     },

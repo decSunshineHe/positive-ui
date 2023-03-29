@@ -1,5 +1,5 @@
 {
-  "version": "0.1.4",
+  "version": "0.1.7",
   "name": "positive-ui",
   "author": "hwj",
   "main": "lib/index.js",
@@ -30,7 +30,8 @@
   "dependencies": {
     "business-utils": "^0.0.3",
     "recharts": "2.1.10",
-    "recharts-scale": "0.4.5"
+    "recharts-scale": "0.4.5",
+    "vite-plugin-css-injected-by-js": "^3.1.0"
   },
   "devDependencies": {
     "@types/node": "^18.15.5",
