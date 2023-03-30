@@ -12,7 +12,6 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run clean && tsc && vite build",
-    "preview": "vite preview",
     "clean": "rimraf dist es lib"
   },
   "dependencies": {

@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import { ConfigProvider, Dropdown, Space, theme } from "antd";
-import styles from "./index.module.less";
-import Icon from "@ant-design/icons";
-import CustomerSvg from "./CustomerSvg";
+import React, { FC } from 'react';
+import { ConfigProvider, Dropdown, Space, theme } from 'antd';
+import styles from './index.module.less';
+import Icon from '@ant-design/icons';
+import CustomerSvg from './CustomerSvg';
 
 const SwitchStaff: FC = () => {
   return (
@@ -19,17 +19,17 @@ const SwitchStaff: FC = () => {
           arrow
           menu={{
             items: [
-              { key: "1", label: "小何的租户" },
-              { key: "2", label: "小冒的租户" },
+              { key: '1', label: '小何的租户' },
+              { key: '2', label: '小冒的租户' },
             ],
 
             selectable: true,
-            selectedKeys: ["1"],
+            selectedKeys: ['1'],
             onClick: ({ key }) => {
-              console.log("点击", key);
+              console.log('点击', key);
             },
           }}
-          trigger={["click"]}
+          trigger={['click']}
         >
           <span className={styles.switchTenant}>切换</span>
         </Dropdown>
