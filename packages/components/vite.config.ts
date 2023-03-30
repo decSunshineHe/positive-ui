@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 import { buildPlugin } from "vite-plugin-build";
 import path from "path";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
-import decamelize from "decamelize";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
@@ -21,7 +20,7 @@ export default defineConfig(({ mode }) => {
             },
             lib: {
               entry: path.resolve(__dirname, "src/index.ts"),
-              name: "MaxtropyUI",
+              name: "PositiveUI",
               fileName: (format) => `positive-ui.${format}.js`,
             },
           },
@@ -41,14 +40,11 @@ export default defineConfig(({ mode }) => {
             if (match[2] !== "index") {
               prefixName += `-${match[2]}`;
             }
-            return `positive-${decamelize(prefixName, {
-              separator: "-",
-            })}__${name}`;
+            return `positive-${prefixName}__${name}`;
           }
 
           return `positive-${name}`;
         },
-        postcss: {},
         preprocessorOptions: {
           less: {
             javascriptEnabled: true,
