@@ -6,6 +6,7 @@
     "bootstrap": "lerna bootstrap"
   },
   "devDependencies": {
-    "lerna": "^6.5.1"
+    "lerna": "^6.5.1",
+    "prettier": "^2.8.7"
   }
 }
