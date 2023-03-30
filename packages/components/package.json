@@ -1,8 +1,7 @@
 {
   "name": "positive-ui",
   "private": false,
-  "version": "0.1.8",
-  "type": "module",
+  "version": "0.1.9",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
