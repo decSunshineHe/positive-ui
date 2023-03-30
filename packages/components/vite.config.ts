@@ -9,6 +9,7 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       buildPlugin({
+        fileBuild: { emitDeclaration: true },
         libBuild: {
           buildOptions: {
             rollupOptions: {
