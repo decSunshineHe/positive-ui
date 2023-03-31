@@ -1,35 +1,54 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+const path = require('path');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const { version: componentVersion } = require(path.relative(__dirname, '../packages/components/package.json'));
+const isProd = process.env.NODE_ENV === 'production';
+const baseUrl = isProd ? '/positive-ui/' : '/';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Positive UI',
+  url: `https://github.com/decSunshineHe`,
+  baseUrl,
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  trailingSlash: true,
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  // 自定义的字段
+  customFields: {
+    // demo 的 github 文件源前缀
+    demoSourceUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master/website',
+    // codeSandbox package.json 配置，目前只支持 dependencies 和 devDependencies
+    codeSandboxPacakgeConfig: {
+      dependencies: {
+        react: '^17.0.2',
+        'react-dom': '^17.0.2',
+        antd: '4.21.3',
+        classnames: '2.3.1',
+        'react-antd-business-components': componentVersion,
+      },
+      devDependencies: {
+        less: '^4.1.3',
+        'less-loader': '^7.3.0',
+      },
+    },
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  organizationName: 'decSunshineHe', // Usually your GitHub org/user name.
+  projectName: 'positive-ui', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -38,18 +57,18 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          path: 'docs/components',
+          routeBasePath: 'components',
+          sidebarPath: require.resolve('./componentsSidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,78 +76,109 @@ const config = {
       }),
     ],
   ],
-
+  plugins: [
+    [
+      'content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'utils',
+        path: 'docs/utils',
+        routeBasePath: 'utils',
+        editUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master',
+        sidebarPath: require.resolve('./utilsSidebars.js'),
+      }),
+    ],
+    './plugins/less',
+    './plugins/alias',
+    './plugins/mdx',
+    './plugins/tsdoc',
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Positive UI',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: '组件文档 Logo',
+          src: 'img/logo.png',
         },
         items: [
+          // 组件
           {
-            type: 'doc',
-            docId: 'intro',
+            to: '/components/intro',
+            label: '组件',
             position: 'left',
-            label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // 公共方法
+          // {
+          //   to: '/utils/intro',
+          //   label: 'Utils',
+          //   position: 'left',
+          // },
+          // { to: '/blog', label: '博客', position: 'right' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/decSunshineHe/positive-ui',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
+        respectPrefersColorScheme: true,
       },
+      algolia: {
+        appId: 'HXVGA2AMP0',
+        apiKey: 'ae77e0e03a0c15f379d31ceb50706ac7',
+        indexName: 'positive-ui',
+      },
+      // 页脚不需要可以不配置
+      // footer: {
+      //   style: 'dark',
+      //   links: [
+      //     {
+      //       title: '学习',
+      //       items: [
+      //         {
+      //           label: '组件介绍',
+      //           to: '/components/intro',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: '社区',
+      //       items: [
+      //         {
+      //           label: 'Stack Overflow',
+      //           href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+      //         },
+      //         {
+      //           label: 'Discord',
+      //           href: 'https://discordapp.com/invite/docusaurus',
+      //         },
+      //         {
+      //           label: 'Twitter',
+      //           href: 'https://twitter.com/docusaurus',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: '更多',
+      //       items: [
+      //         {
+      //           label: '博客',
+      //           to: '/blog',
+      //         },
+      //         {
+      //           label: 'GitHub',
+      //           href: 'https://github.com/decSunshineHe/positive-ui',
+      //         },
+      //       ],
+      //     },
+      //   ],
+      //   copyright: `版权所有 © ${new Date().getFullYear()} 业务组件文档, Inc. 此网站使用 Docusaurus 构建。`,
+      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
