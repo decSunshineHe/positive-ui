@@ -19,24 +19,22 @@ const config = {
   trailingSlash: true,
 
   // 自定义的字段
-  customFields: {
-    // demo 的 github 文件源前缀
-    demoSourceUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master/website',
-    // codeSandbox package.json 配置，目前只支持 dependencies 和 devDependencies
-    codeSandboxPacakgeConfig: {
-      dependencies: {
-        react: '^17.0.2',
-        'react-dom': '^17.0.2',
-        antd: '4.21.3',
-        classnames: '2.3.1',
-        'react-antd-business-components': componentVersion,
-      },
-      devDependencies: {
-        less: '^4.1.3',
-        'less-loader': '^7.3.0',
-      },
-    },
-  },
+  // customFields: {
+  //   // demo 的 github 文件源前缀
+  //   demoSourceUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master/website',
+  //   // codeSandbox package.json 配置，目前只支持 dependencies 和 devDependencies
+  //   codeSandboxPacakgeConfig: {
+  //     dependencies: {
+  //       react: '^17.0.2',
+  //       'react-dom': '^17.0.2',
+  //       antd: '4.24.7',
+  //     },
+  //     devDependencies: {
+  //       less: '^4.1.3',
+  //       'less-loader': '^7.3.0',
+  //     },
+  //   },
+  // },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -93,7 +91,6 @@ const config = {
             label: '组件',
             position: 'left',
           },
-          // { to: '/blog', label: '博客', position: 'right' },
           {
             href: 'https://github.com/decSunshineHe/positive-ui',
             label: 'GitHub',
@@ -106,57 +103,6 @@ const config = {
         disableSwitch: true,
         respectPrefersColorScheme: true,
       },
-      algolia: {
-        appId: 'HXVGA2AMP0',
-        apiKey: 'ae77e0e03a0c15f379d31ceb50706ac7',
-        indexName: 'positive-ui',
-      },
-      // 页脚不需要可以不配置
-      // footer: {
-      //   style: 'dark',
-      //   links: [
-      //     {
-      //       title: '学习',
-      //       items: [
-      //         {
-      //           label: '组件介绍',
-      //           to: '/components/intro',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: '社区',
-      //       items: [
-      //         {
-      //           label: 'Stack Overflow',
-      //           href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      //         },
-      //         {
-      //           label: 'Discord',
-      //           href: 'https://discordapp.com/invite/docusaurus',
-      //         },
-      //         {
-      //           label: 'Twitter',
-      //           href: 'https://twitter.com/docusaurus',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: '更多',
-      //       items: [
-      //         {
-      //           label: '博客',
-      //           to: '/blog',
-      //         },
-      //         {
-      //           label: 'GitHub',
-      //           href: 'https://github.com/decSunshineHe/positive-ui',
-      //         },
-      //       ],
-      //     },
-      //   ],
-      //   copyright: `版权所有 © ${new Date().getFullYear()} 业务组件文档, Inc. 此网站使用 Docusaurus 构建。`,
-      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
