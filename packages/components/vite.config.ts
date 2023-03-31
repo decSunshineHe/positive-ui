@@ -44,7 +44,7 @@ export default defineConfig(({ mode }) => {
           return `positive-${name}`;
         },
         preprocessorOptions: {
-          less: {
+          sass: {
             javascriptEnabled: true,
           },
         },
