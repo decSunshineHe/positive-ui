@@ -1,7 +1,7 @@
 ---
 slug: positive-ui
 title: React 组件文档方案
-authors: [hwj]
+authors: [decSunshineHe]
 tags: [positive-ui]
 ---
 

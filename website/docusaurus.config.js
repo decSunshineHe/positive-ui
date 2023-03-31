@@ -76,23 +76,7 @@ const config = {
       }),
     ],
   ],
-  plugins: [
-    [
-      'content-docs',
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: 'utils',
-        path: 'docs/utils',
-        routeBasePath: 'utils',
-        editUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master',
-        sidebarPath: require.resolve('./utilsSidebars.js'),
-      }),
-    ],
-    './plugins/less',
-    './plugins/alias',
-    './plugins/mdx',
-    './plugins/tsdoc',
-  ],
+  plugins: ['./plugins/less', './plugins/sass', './plugins/alias', './plugins/mdx', './plugins/tsdoc'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -109,12 +93,6 @@ const config = {
             label: '组件',
             position: 'left',
           },
-          // 公共方法
-          // {
-          //   to: '/utils/intro',
-          //   label: 'Utils',
-          //   position: 'left',
-          // },
           // { to: '/blog', label: '博客', position: 'right' },
           {
             href: 'https://github.com/decSunshineHe/positive-ui',
