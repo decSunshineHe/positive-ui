@@ -9,7 +9,7 @@ const SwitchStaff: FC = () => {
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
       <Space align="center">
         <Icon component={CustomerSvg} className={styles.customerSvg} />
-        <div className={styles.tenantName}>小小何的租户</div>
+        <div className={styles.tenantName}>小小何的测试租户</div>
         <Dropdown
           overlayClassName={styles.overlay}
           autoFocus
