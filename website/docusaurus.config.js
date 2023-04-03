@@ -11,7 +11,7 @@ const baseUrl = isProd ? '/positive-ui/' : '/';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Positive UI',
-  url: `https://github.com/decSunshineHe`,
+  url: `https://github.com/`,
   baseUrl,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -61,12 +61,6 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
