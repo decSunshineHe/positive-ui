@@ -19,8 +19,8 @@ const SwitchStaff: FC = () => {
           arrow
           menu={{
             items: [
-              { key: '1', label: '小何的租户' },
-              { key: '2', label: '小冒的租户' },
+              { key: '1', label: '小何的测试租户' },
+              { key: '2', label: '小冒的测试租户' },
             ],
 
             selectable: true,
