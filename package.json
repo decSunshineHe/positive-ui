@@ -1,5 +1,5 @@
 {
-  "name": "positive-ui",
+  "name": "positive",
   "private": true,
   "scripts": {
     "postinstall": "npm run bootstrap",
@@ -7,7 +7,7 @@
     "prepare": "husky install",
     "website": "lerna run --scope positive-website start",
     "build": "lerna run --scope positive-ui build",
-    "publish": "npm run build && lerna run --scope positive-ui publish"
+    "publish": "lerna publish"
   },
   "devDependencies": {
     "husky": "^8.0.3",

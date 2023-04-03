@@ -11,5 +11,4 @@
 `npm run website`
 
 3、发布版本
-cd 到 packages/components 下
-`npm publish`
+`npm run publish`
