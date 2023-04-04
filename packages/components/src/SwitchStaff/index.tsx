@@ -4,7 +4,22 @@ import styles from './index.module.scss';
 import Icon from '@ant-design/icons';
 import CustomerSvg from './CustomerSvg';
 
-const SwitchStaff: FC = () => {
+export interface SwitchStaffProps {
+  /**
+   * 当前租户名称
+   */
+  tenantName: string;
+  /**
+   *  租户列表
+   * */
+  tenantList: Array<{ tenantName: string; tenantId: string }>;
+  /**
+   * 切换租户
+   * */
+  onChange: (tenantId: string) => void;
+}
+
+const SwitchStaff: FC<SwitchStaffProps> = (props: SwitchStaffProps) => {
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
       <Space align="center">

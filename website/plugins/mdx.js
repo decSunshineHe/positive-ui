@@ -12,10 +12,6 @@ module.exports = function (context, opt = {}) {
               include: [siteDir],
               use: [
                 {
-                  loader: require.resolve('../loader/propsTable'),
-                  options: { alias: config.resolve.alias, ...opt },
-                },
-                {
                   loader: require.resolve('../loader/codeShow'),
                   options: { alias: config.resolve.alias, ...opt },
                 },

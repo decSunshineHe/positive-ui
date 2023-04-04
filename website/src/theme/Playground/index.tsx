@@ -9,7 +9,6 @@ import CodeSection, { getSourceString } from '../CodeSection';
 import CodeExpandSvg from './codeExpand.svg';
 import CodeCollapseSvg from './codeCollapse.svg';
 import CodeSandboxSvg from './codeSandbox.svg';
-import GithubSvg from './github.svg';
 
 import styles from './index.module.less';
 
@@ -56,11 +55,6 @@ export default function Playground({ fileList, sourceUrl, children }: Playground
                 <span className={styles.svgIcon} onClick={toggleCode}>
                   <CodeCollapseSvg />
                 </span>
-              )}
-              {sourceUrl && (
-                <a href={`${demoSourceUrl}/${sourceUrl}`} target="_blank" className={styles.svgIcon} rel="noreferrer">
-                  <GithubSvg />
-                </a>
               )}
             </div>
             {codeShowed && fileList?.length > 0 && (
