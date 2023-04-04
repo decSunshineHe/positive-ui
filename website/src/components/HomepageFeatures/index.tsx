@@ -10,21 +10,19 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: '易用性',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: <>完全拥有 Docusaurus 的易用性，同时提供一套可直接使用的 React 组件库和 Utils 类库开发解决方案。</>,
-  },
-  {
-    title: '专注性',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: <>业务组件和 Utils 文档展示统一， 使用 PropsTable、CodeShow、TsDoc 三个组件即可解决大部分文档场景。</>,
-  },
-  {
-    title: '由 React 驱动',
+    title: 'React 18',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>用 💚 和 React 打造，使用 React 实现扩展与自定义 提供你自己的 React 组件，从而完全掌控网站的浏览体验。</>
-    ),
+    description: <>用于构建用户界面的 JavaScript 库。</>,
+  },
+  {
+    title: 'Ant Design 5',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    description: <>助力设计开发者「更灵活」地搭建出「更美」的产品，让用户「快乐工作」～</>,
+  },
+  {
+    title: 'Docusaurus 2',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: <>快速构建高效的网站，专注处理内容。</>,
   },
 ];
 

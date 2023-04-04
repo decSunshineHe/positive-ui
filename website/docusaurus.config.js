@@ -19,22 +19,20 @@ const config = {
   trailingSlash: true,
 
   // 自定义的字段
-  // customFields: {
-  //   // demo 的 github 文件源前缀
-  //   demoSourceUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master/website',
-  //   // codeSandbox package.json 配置，目前只支持 dependencies 和 devDependencies
-  //   codeSandboxPacakgeConfig: {
-  //     dependencies: {
-  //       react: '^17.0.2',
-  //       'react-dom': '^17.0.2',
-  //       antd: '4.24.7',
-  //     },
-  //     devDependencies: {
-  //       less: '^4.1.3',
-  //       'less-loader': '^7.3.0',
-  //     },
-  //   },
-  // },
+  customFields: {
+    // codeSandbox package.json 配置，目前只支持 dependencies 和 devDependencies
+    codeSandboxPacakgeConfig: {
+      dependencies: {
+        react: '^18.2.0',
+        'react-dom': '^18.2.0',
+        antd: '5.3.2',
+        'positive-ui': componentVersion,
+      },
+      devDependencies: {
+        sass: '^1.60.0',
+      },
+    },
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -93,7 +91,7 @@ const config = {
         ],
       },
       colorMode: {
-        defaultMode: 'light',
+        defaultMode: 'dark',
         disableSwitch: true,
         respectPrefersColorScheme: true,
       },
