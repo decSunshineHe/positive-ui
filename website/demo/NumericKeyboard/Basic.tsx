@@ -1,0 +1,17 @@
+import React from 'react';
+import { NumericKeyboard } from 'positive-ui';
+import { Input, Divider } from 'antd';
+
+export default () => {
+  return (
+    <div style={{ height: 460, position: 'relative', display: 'flex' }}>
+      <div style={{ width: 200 }}>
+        <Input />
+      </div>
+      <Divider type="vertical" style={{ height: '100%' }} />
+      <div className="App" style={{ height: '100%', width: 560 }}>
+        <NumericKeyboard />
+      </div>
+    </div>
+  );
+};

@@ -8,15 +8,15 @@ export interface SwitchStaffProps {
   /**
    * 当前租户名称
    */
-  tenantName: string;
+  tenantName?: string;
   /**
    *  租户列表
    * */
-  tenantList: Array<{ tenantName: string; tenantId: string }>;
+  tenantList?: Array<{ tenantName: string; tenantId: string }>;
   /**
    * 切换租户
    * */
-  onChange: (tenantId: string) => void;
+  onChange?: (tenantId: string) => void;
 }
 
 const SwitchStaff: FC<SwitchStaffProps> = (props: SwitchStaffProps) => {
