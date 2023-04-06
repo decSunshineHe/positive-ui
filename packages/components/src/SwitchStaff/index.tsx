@@ -19,7 +19,7 @@ export interface SwitchStaffProps {
   onChange?: (tenantId: string) => void;
 }
 
-const SwitchStaff: FC<SwitchStaffProps> = (props: SwitchStaffProps) => {
+const SwitchStaff: FC<SwitchStaffProps> = () => {
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
       <Space align="center">
