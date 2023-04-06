@@ -130,7 +130,7 @@ const NumericKeyboard: React.FC<KeyboardProps> = ({
     <Rnd
       style={{ visibility: visible ? 'visible' : 'hidden' }}
       className={styles.boardWrapper}
-      size={{ width: 303, height: 435 }}
+      size={{ width: 210, height: 330 }}
       position={position}
       onDragStop={(_, d) => {
         setPosition({ x: d.x, y: d.y });
