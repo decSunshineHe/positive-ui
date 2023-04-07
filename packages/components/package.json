@@ -1,7 +1,7 @@
 {
   "name": "positive-ui",
   "private": false,
-  "version": "0.3.3",
+  "version": "0.3.4",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
@@ -21,7 +21,9 @@
     "dev": "vite",
     "build": "npm run lint && npm run clean && tsc && vite build",
     "clean": "rimraf dist es lib",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --no-error-on-unmatched-pattern"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --no-error-on-unmatched-pattern",
+    "postpublish": "git push && git push --tags",
+    "postversion": "npm run build && npm publish"
   },
   "dependencies": {
     "react": "^18.2.0",
