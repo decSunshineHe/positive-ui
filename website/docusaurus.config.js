@@ -55,7 +55,7 @@ const config = {
         docs: {
           path: 'docs/components',
           routeBasePath: 'components',
-          sidebarPath: require.resolve('./componentsSidebars.js'),
+          sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master',
@@ -90,11 +90,11 @@ const config = {
           },
         ],
       },
-      colorMode: {
-        defaultMode: 'dark',
-        disableSwitch: true,
-        respectPrefersColorScheme: true,
-      },
+      // colorMode: {
+      //   defaultMode: 'dark',
+      //   disableSwitch: true,
+      //   respectPrefersColorScheme: true,
+      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
