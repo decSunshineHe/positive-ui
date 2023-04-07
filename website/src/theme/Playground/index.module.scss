@@ -1,8 +1,8 @@
-@ifm-color-emphasis-300: #f0f0f0;
+$ifm-color-emphasis-300: #f0f0f0;
 
 .playgroundContainer {
   margin-bottom: 1rem;
-  border: 1px solid @ifm-color-emphasis-300;
+  border: 1px solid $ifm-color-emphasis-300;
 }
 
 .playgroundContent {
@@ -12,7 +12,7 @@
 }
 
 .playgroundIDE {
-  background-color: @ifm-color-emphasis-300;
+  background-color: $ifm-color-emphasis-300;
 }
 
 :global {
@@ -35,7 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px dashed @ifm-color-emphasis-300;
+  border-top: 1px dashed $ifm-color-emphasis-300;
   padding: 0.5rem 1rem;
   gap: 16px;
 }

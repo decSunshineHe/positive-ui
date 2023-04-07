@@ -4,13 +4,11 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { getParameters } from 'codesandbox/lib/api/define';
-
 import CodeSection, { getSourceString } from '../CodeSection';
 import CodeExpandSvg from './codeExpand.svg';
 import CodeCollapseSvg from './codeCollapse.svg';
 import CodeSandboxSvg from './codeSandbox.svg';
-
-import styles from './index.module.less';
+import styles from './index.module.scss';
 
 export interface FileListMap {
   fileName: string;

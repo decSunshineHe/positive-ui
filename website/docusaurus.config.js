@@ -66,7 +66,7 @@ const config = {
       }),
     ],
   ],
-  plugins: ['./plugins/less', './plugins/sass', './plugins/alias', './plugins/mdx', './plugins/tsdoc'],
+  plugins: ['./plugins/sass', './plugins/alias', './plugins/mdx', './plugins/tsdoc'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
