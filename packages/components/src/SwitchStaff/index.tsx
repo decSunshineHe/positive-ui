@@ -5,17 +5,8 @@ import Icon from '@ant-design/icons';
 import CustomerSvg from './CustomerSvg';
 
 export interface SwitchStaffProps {
-  /**
-   * 当前租户名称
-   */
   tenantName?: string;
-  /**
-   *  租户列表
-   * */
   tenantList?: Array<{ tenantName: string; tenantId: string }>;
-  /**
-   * 切换租户
-   * */
   onChange?: (tenantId: string) => void;
 }
 
