@@ -63,7 +63,7 @@ const NumericKeyboard: React.FC<KeyboardProps> = ({
     };
   }, [inputDom]);
 
-  // 更新input框的光标位置
+  // 更新input框的光标位置11
   const updateCaretPos = (index: number) => {
     setCaretPosition(index);
     inputDom?.focus();
