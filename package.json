@@ -1,7 +1,6 @@
 {
   "name": "positive",
   "private": true,
-  "version": "0.3.8",
   "keywords": [
     "react",
     "typescript",
