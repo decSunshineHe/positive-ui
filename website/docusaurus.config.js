@@ -1,35 +1,50 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+const path = require('path');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const { version: componentVersion } = require(path.relative(__dirname, '../packages/components/package.json'));
+const isProd = process.env.NODE_ENV === 'production';
+const baseUrl = isProd ? '/positive-ui/' : '/';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Positive UI',
+  url: `https://github.com/`,
+  baseUrl,
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+  trailingSlash: true,
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  // 自定义的字段
+  customFields: {
+    // codeSandbox package.json 配置，目前只支持 dependencies 和 devDependencies
+    codeSandboxPacakgeConfig: {
+      dependencies: {
+        react: '^18.2.0',
+        'react-dom': '^18.2.0',
+        antd: '5.3.2',
+        'positive-ui': componentVersion,
+      },
+      devDependencies: {
+        sass: '^1.60.0',
+      },
+    },
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  organizationName: 'decSunshineHe', // Usually your GitHub org/user name.
+  projectName: 'positive-ui', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'],
   },
 
   presets: [
@@ -38,18 +53,12 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: 'docs/components',
+          routeBasePath: 'components',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,78 +66,35 @@ const config = {
       }),
     ],
   ],
-
+  plugins: ['./plugins/sass', './plugins/alias', './plugins/mdx', './plugins/tsdoc'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'Positive UI',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: '组件文档 Logo',
+          src: 'img/logo.png',
         },
         items: [
+          // 组件
           {
-            type: 'doc',
-            docId: 'intro',
+            to: '/components/intro',
+            label: '组件',
             position: 'left',
-            label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/decSunshineHe/positive-ui',
             label: 'GitHub',
             position: 'right',
           },
         ],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      },
+      // colorMode: {
+      //   defaultMode: 'dark',
+      //   disableSwitch: true,
+      //   respectPrefersColorScheme: true,
+      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
