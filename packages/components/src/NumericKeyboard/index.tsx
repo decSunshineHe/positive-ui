@@ -35,7 +35,7 @@ const NumericKeyboard: React.FC<KeyboardProps> = ({
     setVisible(show ?? false);
   }, [show]);
 
-  // 将input元素的事件委托到上层统一监听11
+  // 将input元素的事件委托到上层统一监听
   useEffect(() => {
     const overallClick = (e: any) => {
       if (e.target.tagName === 'INPUT' && e.target.type === 'text' && (!inputDom || e.target.id !== inputDom.id)) {
