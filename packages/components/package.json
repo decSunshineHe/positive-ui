@@ -52,6 +52,5 @@
     "vite-plugin-build": "^0.8.0",
     "vite-plugin-css-injected-by-js": "^3.1.0",
     "vite-plugin-eslint": "^1.8.1"
-  },
-  "gitHead": "ab3d777f79b559ef01bf20e3d6e83894c72d62f9"
+  }
 }
