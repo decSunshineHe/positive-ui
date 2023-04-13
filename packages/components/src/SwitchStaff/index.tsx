@@ -32,7 +32,7 @@ const SwitchStaff: FC<SwitchStaffProps> = () => {
             selectable: true,
             selectedKeys: ['1'],
             onClick: ({ key }) => {
-              console.log('点击111', key);
+              console.log('点击222', key);
             },
           }}
           trigger={['click']}
