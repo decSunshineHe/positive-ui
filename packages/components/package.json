@@ -1,7 +1,7 @@
 {
-  "name": "positive-ui",
+  "name": "@positive-map/ui-components",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
