@@ -14,6 +14,7 @@
     "prepare": "husky install",
     "start": "lerna run --scope positive-website start",
     "build": "lerna run --scope positive-ui build",
+    "clean": "lerna run --scope positive-ui clean",
     "publish": "lerna publish"
   },
   "devDependencies": {
