@@ -1,4 +1,4 @@
-# @positive-map/ui-components
+# @positive-map/rc-components
 
 Positive UI 基于 React 18 + Antd 5 的业务组件库
 
@@ -11,14 +11,14 @@ Positive UI 基于 React 18 + Antd 5 的业务组件库
 ## 安装
 
 ```shell
-$ npm install @positive-map/ui-components --save-dev
+$ npm install @positive-map/rc-components --save-dev
 ```
 
 ## 使用
 
 ```js
 // 业务代码
-import { NumericKeyboard } from '@positive-map/ui-components';
+import { NumericKeyboard } from '@positive-map/rc-components';
 ```
 
 ## 按需加载
@@ -26,7 +26,7 @@ import { NumericKeyboard } from '@positive-map/ui-components';
 ### 方式一：精确加载
 
 ```js
-import NumericKeyboard from '@positive-map/ui-components/lib/NumericKeyboard';
+import NumericKeyboard from '@positive-map/rc-components/lib/NumericKeyboard';
 ```
 
 ### 方式二：babel-plugin-import
@@ -38,7 +38,7 @@ module.exports = {
     [
       'import',
       {
-        libraryName: '@positive-map/ui-components',
+        libraryName: '@positive-map/rc-components',
         libraryDirectory: 'lib',
         camel2DashComponentName: false,
       },
