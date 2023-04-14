@@ -1,7 +1,10 @@
 {
   "name": "positive-website",
-  "version": "0.3.3",
+  "version": "1.0.2",
   "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -35,7 +38,7 @@
     "sass": "^1.60.0",
     "sass-loader": "^13.2.2",
     "ts-doc-webpack-loader": "1.0.2",
-    "typescript": "^4.6.4"
+    "typescript": "^4.9.3"
   },
   "browserslist": {
     "production": [

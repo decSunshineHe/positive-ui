@@ -20,7 +20,7 @@ const SwitchStaff: FC<SwitchStaffProps> = () => {
         <Icon component={CustomerSvg} className={styles.customerSvg} />
         <div className={styles.tenantName}>小小何的测试租户</div>
         <Dropdown
-          overlayClassName={styles.overlay}
+          overlayClassName={'overlay'}
           autoFocus
           autoAdjustOverflow={false}
           placement="bottomRight"
@@ -35,7 +35,7 @@ const SwitchStaff: FC<SwitchStaffProps> = () => {
             selectable: true,
             selectedKeys: ['1'],
             onClick: ({ key }) => {
-              console.log('点击', key);
+              console.log('点击222', key);
             },
           }}
           trigger={['click']}
