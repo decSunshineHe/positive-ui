@@ -1,5 +1,5 @@
 import React from 'react';
-import { NumericKeyboard } from 'positive-ui';
+import { NumericKeyboard } from '@positive-map/rc-components';
 import { Input, Divider } from 'antd';
 
 export default () => {

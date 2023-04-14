@@ -4,8 +4,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "positive-ui": ["../packages/components/src"],
-      "rc-utils": ["../packages/utils/src"]
+      "@positive-map/rc-components": ["../packages/components/src"],
+      "@positive-map/rc-utils": ["../packages/utils/src"]
     }
   },
   "include": ["src/", "demo/"]

@@ -20,8 +20,8 @@ export default defineConfig(({ mode }) => {
             },
             lib: {
               entry: path.resolve(__dirname, 'src/index.ts'),
-              name: 'PositiveUI',
-              fileName: format => `positive-ui.${format}.js`,
+              name: 'PositiveRCComponents',
+              fileName: format => `positive-rc-components.${format}.js`,
             },
           },
         },

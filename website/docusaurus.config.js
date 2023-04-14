@@ -26,7 +26,7 @@ const config = {
         react: '^18.2.0',
         'react-dom': '^18.2.0',
         antd: '5.3.2',
-        'positive-ui': componentVersion,
+        '@positive-map/rc-components': componentVersion,
       },
       devDependencies: {
         sass: '^1.60.0',
