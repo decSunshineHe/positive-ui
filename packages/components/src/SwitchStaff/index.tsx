@@ -3,23 +3,17 @@ import { ConfigProvider, Dropdown, Space, theme } from 'antd';
 import styles from './index.module.scss';
 import Icon from '@ant-design/icons';
 import CustomerSvg from './CustomerSvg';
+import { useCurrent } from '@positive-map/rc-utils';
 
 export interface SwitchStaffProps {
-  /**
-   * 当前租户名称
-   */
   tenantName?: string;
-  /**
-   *  租户列表
-   * */
   tenantList?: Array<{ tenantName: string; tenantId: string }>;
-  /**
-   * 切换租户
-   * */
   onChange?: (tenantId: string) => void;
 }
 
 const SwitchStaff: FC<SwitchStaffProps> = () => {
+  const tenantName = useCurrent();
+  console.log('tenantName', tenantName);
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
       <Space align="center">

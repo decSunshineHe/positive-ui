@@ -5,6 +5,7 @@
     "baseUrl": ".",
     "paths": {
       "positive-ui": ["../packages/components/src"],
+      "rc-utils": ["../packages/utils/src"]
     }
   },
   "include": ["src/", "demo/"]
