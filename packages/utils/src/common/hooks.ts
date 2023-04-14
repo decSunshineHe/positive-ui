@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 export function useCurrent() {
   useEffect(() => {
-    console.log('测试一下');
+    console.log('测试一下demo');
   }, []);
 
   return '小何的测试用户';

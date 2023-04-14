@@ -25,7 +25,8 @@
     "build": "npm run lint && npm run clean && tsc && vite build",
     "clean": "rimraf dist es lib",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --no-error-on-unmatched-pattern",
-    "test": "vitest"
+    "test": "vitest",
+    "postversion": "npm run build"
   },
   "dependencies": {
     "react": "^18.2.0",

@@ -13,7 +13,7 @@ export interface SwitchStaffProps {
 
 const SwitchStaff: FC<SwitchStaffProps> = () => {
   const tenantName = useCurrent();
-  console.log('tenantName', tenantName);
+  console.log('tenantName demo', tenantName);
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
       <Space align="center">
