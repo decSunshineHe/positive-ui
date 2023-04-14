@@ -5,7 +5,7 @@
     "react",
     "typescript",
     "docusaurus",
-    "ui-components",
+    "rc-components",
     "vite"
   ],
   "scripts": {
@@ -13,8 +13,8 @@
     "bootstrap": "lerna bootstrap",
     "prepare": "husky install",
     "start": "lerna run --scope ui-website start",
-    "build": "lerna run --scope ui-components build",
-    "clean": "lerna run --scope ui-components clean",
+    "build": "lerna run --scope rc-components build",
+    "clean": "lerna run --scope rc-components clean",
     "publish": "lerna publish"
   },
   "devDependencies": {

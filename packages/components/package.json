@@ -1,5 +1,5 @@
 {
-  "name": "@positive-map/ui-components",
+  "name": "@positive-map/rc-components",
   "private": false,
   "version": "1.0.3",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
     "es"
   ],
   "keywords": [
-    "ui-components",
+    "components",
     "react",
     "typescript",
     "antd",
