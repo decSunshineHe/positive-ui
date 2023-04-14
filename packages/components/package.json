@@ -25,7 +25,6 @@
     "build": "npm run lint && npm run clean && tsc && vite build",
     "clean": "rimraf dist es lib",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --no-error-on-unmatched-pattern",
-    "postversion": "npm run build && npm publish",
     "test": "vitest"
   },
   "dependencies": {
@@ -60,5 +59,6 @@
     "vite-plugin-css-injected-by-js": "^3.1.0",
     "vite-plugin-eslint": "^1.8.1",
     "vitest": "^0.29.7"
-  }
+  },
+  "gitHead": "90bbc879e9ac2e1981580a7aa41880110acac0e1"
 }
