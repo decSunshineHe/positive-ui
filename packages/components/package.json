@@ -32,13 +32,16 @@
     "@positive-map/rc-utils": "^1.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-rnd": "^10.4.1"
+    "react-rnd": "^10.4.1",
+    "react-router-dom": "^6.3.0",
+    "react-router": "^6.3.0"
   },
   "peerDependencies": {
     "antd": ">=5",
     "react": ">=17",
     "react-dom": ">=17",
-    "rxjs": ">=7.8.0"
+    "rxjs": ">=7.8.0",
+    "react-router-dom": ">=6"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",

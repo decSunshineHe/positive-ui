@@ -53,6 +53,6 @@ instance.interceptors.response.use(
   }
 );
 
-const request = <T>(cfg: AxiosRequestConfig) => instance.request<T>(cfg);
+const request = <T>(cfg: AxiosRequestConfig) => instance.request<nerver, T>(cfg);
 
 export default request;

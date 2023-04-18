@@ -14,8 +14,8 @@
     "prepare": "husky install",
     "start": "lerna run --scope ui-website start",
     "build": "lerna run --scope rc-components build",
-    "clean": "lerna run --scope rc-components clean",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "clean": "rimraf packages/*/package-lock.json && rimraf website/package-lock.json && rimraf package-lock.json && rimraf packages/*/node_modules && rimraf website/node_modules && rimraf node_modules"
   },
   "devDependencies": {
     "husky": "^8.0.3",
