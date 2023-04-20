@@ -4,7 +4,6 @@ import styles from './index.module.scss';
 import Icon from '@ant-design/icons';
 import CustomerSvg from './CustomerSvg';
 import { useCurrent } from '@positive-map/rc-utils';
-import { useNavigate } from 'react-router-dom';
 
 export interface SwitchStaffProps {
   tenantName?: string;
@@ -14,8 +13,6 @@ export interface SwitchStaffProps {
 
 const SwitchStaff: FC<SwitchStaffProps> = () => {
   const tenantName = useCurrent();
-  const navigate = useNavigate();
-  console.log('tenantName demo', navigate);
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
       <Space align="center">
