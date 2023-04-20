@@ -31,5 +31,7 @@ npm run publish
 4、开发组件
 
 - 在`packages/componets/src`下实现组件, 并在`packages/componets/src/index.ts`中导出
+- 在`packages/utils/src`下实现工具函数, 并在`packages/utils/src/index.ts`中导出
+- 在`packages/*/src/*/__tests__`下编写组件测试用例
 - 在`website/demo`下编写组件 demo
 - 在`website/docs/components`下编写组件文档
