@@ -5,14 +5,12 @@ const path = require('path');
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const { version: componentVersion } = require(path.relative(__dirname, '../packages/components/package.json'));
-const isProd = process.env.NODE_ENV === 'production';
-const baseUrl = '/positive-map/';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Positive Map',
-  url: `https://decSunshineHe.github.io`,
-  baseUrl,
+  url: 'https://decSunshineHe.github.io',
+  baseUrl: '/positive-map/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
