@@ -26,12 +26,29 @@ npm run website
 npm run publish
 ```
 
-备注：目前未确定仓库地址
-
 4、开发组件
 
 - 在`packages/componets/src`下实现组件, 并在`packages/componets/src/index.ts`中导出
-- 在`packages/utils/src`下实现工具函数, 并在`packages/utils/src/index.ts`中导出
-- 在`packages/*/src/*/__tests__`下编写组件测试用例
+- 在`packages/utils/src`下编写组件工具函数，并在`packages/utils/src/index.ts`中导出
+- 在`packages/*/src/*/_tests_/index.spec.tsx`下编写组件测试用例
 - 在`website/demo`下编写组件 demo
 - 在`website/docs/components`下编写组件文档
+
+5、清除依赖
+
+```
+npm run clean
+```
+
+会删除`node_modules`和`packages/*/node_modules`以及对应的`package-lock.json`
+
+6、发布静态站点
+
+不使用 SSH:
+
+```shell
+$ cd ./website # 确保进入 website 文件夹
+$ GIT_USER=decSunshineHe npm run deploy
+```
+
+如果您使用的是 github 页面进行托管，则此命令是构建网站并将其推向 `GH-pages` 分支的便捷方法。
