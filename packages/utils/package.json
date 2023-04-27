@@ -1,7 +1,7 @@
 {
-  "name": "@positive-map/rc-components",
+  "name": "@positive-map/rc-utils",
   "private": false,
-  "version": "1.0.10",
+  "version": "1.0.8",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
@@ -14,7 +14,7 @@
     "es"
   ],
   "keywords": [
-    "components",
+    "utils",
     "react",
     "typescript",
     "antd",
@@ -29,18 +29,13 @@
     "postversion": "npm run build"
   },
   "dependencies": {
-    "@positive-map/rc-utils": "^1.0.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-rnd": "^10.4.1",
-    "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0"
+    "react-dom": "^18.2.0"
   },
   "peerDependencies": {
     "antd": ">=5",
     "react": ">=17",
     "react-dom": ">=17",
-    "react-router-dom": ">=6",
     "rxjs": ">=7.8.0"
   },
   "devDependencies": {
@@ -57,13 +52,10 @@
     "happy-dom": "^9.2.1",
     "react-test-renderer": "^18.2.0",
     "rimraf": "^4.4.1",
-    "sass": "^1.60.0",
     "typescript": "^4.9.3",
     "vite": "^4.2.0",
     "vite-plugin-build": "^0.8.0",
-    "vite-plugin-css-injected-by-js": "^3.1.0",
     "vite-plugin-eslint": "^1.8.1",
     "vitest": "^0.29.7"
-  },
-  "gitHead": "90bbc879e9ac2e1981580a7aa41880110acac0e1"
+  }
 }

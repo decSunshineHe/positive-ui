@@ -3,6 +3,7 @@ import { ConfigProvider, Dropdown, Space, theme } from 'antd';
 import styles from './index.module.scss';
 import Icon from '@ant-design/icons';
 import CustomerSvg from './CustomerSvg';
+import { useCurrent } from '@positive-map/rc-utils';
 
 export interface SwitchStaffProps {
   tenantName?: string;
@@ -11,11 +12,12 @@ export interface SwitchStaffProps {
 }
 
 const SwitchStaff: FC<SwitchStaffProps> = () => {
+  const tenantName = useCurrent();
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
       <Space align="center">
         <Icon component={CustomerSvg} className={styles.customerSvg} />
-        <div className={styles.tenantName}>小小何的测试租户</div>
+        <div className={styles.tenantName}>小何的租户</div>
         <Dropdown
           overlayClassName={'overlay'}
           autoFocus

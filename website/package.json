@@ -1,6 +1,6 @@
 {
-  "name": "positive-website",
-  "version": "1.0.2",
+  "name": "ui-website",
+  "version": "1.0.9",
   "private": true,
   "publishConfig": {
     "access": "public"
