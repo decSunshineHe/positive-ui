@@ -8,7 +8,7 @@ import CodeSection, { getSourceString } from '../CodeSection';
 import CodeExpandSvg from './codeExpand.svg';
 import CodeCollapseSvg from './codeCollapse.svg';
 import CodeSandboxSvg from './codeSandbox.svg';
-import styles from './index.module.scss';
+import styles from './index.module.css';
 
 export interface FileListMap {
   fileName: string;
