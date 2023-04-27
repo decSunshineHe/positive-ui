@@ -6,12 +6,12 @@ const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const { version: componentVersion } = require(path.relative(__dirname, '../packages/components/package.json'));
 const isProd = process.env.NODE_ENV === 'production';
-const baseUrl = isProd ? '/positive-ui/' : '/';
+const baseUrl = isProd ? '/positive-map/' : '/';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Positive UI',
-  url: `https://github.com/`,
+  title: 'Positive Map',
+  url: `https://decSunshineHe.github.io${baseUrl}`,
   baseUrl,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -37,7 +37,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'decSunshineHe', // Usually your GitHub org/user name.
-  projectName: 'positive-ui', // Usually your repo name.
+  projectName: 'positive-map', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -58,7 +58,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          // editUrl: 'https://github.com/decSunshineHe/positive-ui/tree/master',
+          // editUrl: 'https://github.com/decSunshineHe/positive-map/tree/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -71,7 +71,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Positive UI',
+        title: 'Positive Map',
         logo: {
           alt: '组件文档 Logo',
           src: 'img/logo.png',
@@ -84,7 +84,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/decSunshineHe/positive-ui',
+            href: 'https://github.com/decSunshineHe/positive-map',
             label: 'GitHub',
             position: 'right',
           },

@@ -1,6 +1,6 @@
 # @positive-map/rc-components
 
-Positive UI 基于 React 18 + Antd 5 的业务组件库
+Positive Map 基于 React 18 + Antd 5 的业务组件库
 
 ## 特性
 
