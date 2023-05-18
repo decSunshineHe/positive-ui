@@ -51,8 +51,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'docs/components',
-          routeBasePath: 'components',
+          path: 'docs/',
+          routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
@@ -64,7 +64,7 @@ const config = {
       }),
     ],
   ],
-  plugins: ['./plugins/sass', './plugins/alias', './plugins/mdx', './plugins/tsdoc'],
+  plugins: ['./plugins/sass', './plugins/alias', './plugins/mdx', './plugins/tsdoc', './plugins/devServer'],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -75,11 +75,15 @@ const config = {
           src: 'img/logo.png',
         },
         items: [
-          // 组件
           {
-            to: '/components/intro',
+            to: '/guide/intro',
+            label: '指南',
+            position: 'right',
+          },
+          {
+            to: '/components/page-elements/SwitchStaff',
             label: '组件',
-            position: 'left',
+            position: 'right',
           },
           {
             href: 'https://github.com/decSunshineHe/positive-map',
