@@ -51,4 +51,6 @@ $ cd ./website # 确保进入 website 文件夹
 $ GIT_USER=decSunshineHe npm run deploy
 ```
 
+git subtree push --prefix=website/build origin gh-pages
+
 如果您使用的是 github 页面进行托管，则此命令是构建网站并将其推向 `GH-pages` 分支的便捷方法。

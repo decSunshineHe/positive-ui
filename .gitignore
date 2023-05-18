@@ -9,8 +9,7 @@ lerna-debug.log*
 
 # Files
 node_modules
-build
-dist
+packages/*/build
 lib
 es
 dist-ssr
