@@ -2329,7 +2329,7 @@
               { className: o.buttons },
               l.createElement(
                 n.Z,
-                { className: 'button button--secondary button--lg', to: '/components/intro' },
+                { className: 'button button--secondary button--lg', to: '/guide/intro' },
                 '\u8d77\u6b65'
               )
             )
