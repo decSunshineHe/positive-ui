@@ -14,6 +14,7 @@ async function fetch<T>(input: RequestInfo, init?: RequestInit): Promise<T> {
 }
 
 interface ErrorHandler {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (err: any): boolean;
 }
 
@@ -23,10 +24,12 @@ interface ErrorHandlerReceiver<T> {
   onError(handler: ErrorHandler): PromiseWithErrorHandler<T>;
   then<TResult1 = T, TResult2 = never>(
     onfulfilled?: ((value: T) => TResult1 | PromiseLike<TResult1>) | undefined | null,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null
   ): Promise<TResult1 | TResult2>;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function defaultErrorHandling(err: any): boolean {
   let rce: ResponseCodeError | undefined;
   let defaultMessage = '未知错误！ 请联系管理员。';
@@ -83,6 +86,7 @@ export class ResponseError extends Error {
 }
 
 interface DefaultErrorHandler {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   (err: any): boolean;
 }
 
@@ -115,7 +119,9 @@ export const createFetchInstance = (defaultConfig?: fetchConfigProps) => {
     };
 
     const _then = mergedResult.then;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     mergedResult.then = <T, nerver>(onfulfilled: any, onrejected: any) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const fulfilled = (...args: any[]) => {
         if (callThen) {
           return onfulfilled(...args);
