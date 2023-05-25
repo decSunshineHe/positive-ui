@@ -1,6 +1,6 @@
 {
   "name": "ui-website",
-  "version": "1.0.9",
+  "version": "1.0.11-alpha.0",
   "private": true,
   "publishConfig": {
     "access": "public"
