@@ -42,7 +42,3 @@ export function switchStaff(id: Key): Promise<void> {
     method: 'PUT',
   });
 }
-
-export function getStaffPermission(): Promise<string[]> {
-  return fetch(`/api/staff/permission`);
-}
