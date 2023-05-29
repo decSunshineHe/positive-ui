@@ -22,8 +22,16 @@ npm run website
 
 3、发布版本
 
+正式版本
+
 ```
-npm run publish
+npm run release
+```
+
+测试版本
+
+```
+npm run release:beta
 ```
 
 4、开发组件
