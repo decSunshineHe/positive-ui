@@ -1,7 +1,7 @@
 {
   "name": "@positive-map/rc-components",
   "private": false,
-  "version": "1.0.12-beta.0",
+  "version": "1.0.12-beta.1",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
@@ -29,7 +29,7 @@
     "postversion": "npm run build"
   },
   "dependencies": {
-    "@positive-map/rc-utils": "^1.0.12-beta.0",
+    "@positive-map/rc-utils": "^1.0.12-beta.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-rnd": "^10.4.1",
