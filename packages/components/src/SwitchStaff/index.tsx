@@ -30,6 +30,7 @@ const SwitchStaff: FC<SwitchStaffProps> = () => {
               { key: '1', label: '小何的测试租户1' },
               { key: '2', label: '小冒的测试租户2' },
               { key: '3', label: '小冒的测试租户3' },
+              { key: '4', label: '小冒的测试租户4' },
             ],
 
             selectable: true,
