@@ -1,7 +1,7 @@
 {
   "name": "@positive-map/rc-utils",
   "private": false,
-  "version": "1.0.12",
+  "version": "1.0.13",
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
