@@ -27,8 +27,9 @@ const SwitchStaff: FC<SwitchStaffProps> = () => {
           arrow
           menu={{
             items: [
-              { key: '1', label: '小何的测试租户' },
-              { key: '2', label: '小冒的测试租户' },
+              { key: '1', label: '小何的测试租户1' },
+              { key: '2', label: '小冒的测试租户2' },
+              { key: '3', label: '小冒的测试租户3' },
             ],
 
             selectable: true,
