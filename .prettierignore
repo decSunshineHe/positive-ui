@@ -3,3 +3,6 @@ dist
 lib
 es
 tsconfig.json
+.dumi/tmp
+.dumi/tmp-production
+*.yaml

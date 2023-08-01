@@ -7,14 +7,14 @@ order: 1
 ## 安装
 
 ```shell
-$ npm install @positive/rc-components --save-dev
+$ npm install @positive-map/rc-components --save-dev
 ```
 
 ## 基本使用
 
 ```js
 // 业务代码
-import { SwitchStaff } from '@positive/rc-components';
+import { SwitchStaff } from '@positive-map/rc-components';
 ```
 
 ## 按需加载
@@ -22,7 +22,7 @@ import { SwitchStaff } from '@positive/rc-components';
 ### 方式一：精确加载
 
 ```js
-import SwitchStaff from '@positive/rc-components/lib/SwitchStaff';
+import SwitchStaff from '@positive-map/rc-components/lib/SwitchStaff';
 ```
 
 ### 方式二：babel-plugin-import
@@ -40,7 +40,7 @@ module.exports = {
     [
       'import',
       {
-        libraryName: '@positive/rc-components',
+        libraryName: '@positive-map/rc-components',
         libraryDirectory: 'lib',
         camel2DashComponentName: false,
       },

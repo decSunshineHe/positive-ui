@@ -22,8 +22,9 @@ __snapshots__
 .cache
 .cache-loader
 .idea
-.docusaurus
 .DS_Store
+website/.dumi/tmp
+website/.dumi/tmp-production
 
 # Others
 *.suo

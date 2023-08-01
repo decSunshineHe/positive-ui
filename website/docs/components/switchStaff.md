@@ -12,7 +12,7 @@ order: 1
 :::
 
 ```tsx
-import { SwitchStaff } from '@positive/rc-components';
+import { SwitchStaff } from '@positive-map/rc-components';
 
 export default () => {
   return (

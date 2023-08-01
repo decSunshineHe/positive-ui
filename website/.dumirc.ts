@@ -14,7 +14,6 @@ export default defineConfig({
   proxy: {},
   themeConfig: {
     footer: '© Copyright 2023 Positive',
-    logo: '/react/logo-light.svg',
     nav: [
       { title: '指南', link: '/guide/use' },
       { title: '组件', link: '/components/switch-staff' },

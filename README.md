@@ -7,10 +7,8 @@
 1、安装依赖
 
 ```
-npm run bootstrap --legacy-peer-deps
+npm run bootstrap
 ```
-
-备注：由于 docusaurus 依赖的 react 版本与 antd 依赖的 react 版本不一致，所以需要加上`--legacy-peer-deps`参数
 
 2、启动项目
 
