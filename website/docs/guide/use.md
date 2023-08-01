@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+order: 1
 ---
 
 # 快速上手
@@ -7,14 +7,14 @@ sidebar_position: 2
 ## 安装
 
 ```shell
-$ npm install @positive-map/rc-components --save-dev
+$ npm install @positive/rc-components --save-dev
 ```
 
 ## 基本使用
 
 ```js
 // 业务代码
-import { SwitchStaff } from '@positive-map/rc-components';
+import { SwitchStaff } from '@positive/rc-components';
 ```
 
 ## 按需加载
@@ -22,7 +22,7 @@ import { SwitchStaff } from '@positive-map/rc-components';
 ### 方式一：精确加载
 
 ```js
-import SwitchStaff from '@positive-map/rc-components/lib/SwitchStaff';
+import SwitchStaff from '@positive/rc-components/lib/SwitchStaff';
 ```
 
 ### 方式二：babel-plugin-import
@@ -40,7 +40,7 @@ module.exports = {
     [
       'import',
       {
-        libraryName: '@positive-map/rc-components',
+        libraryName: '@positive/rc-components',
         libraryDirectory: 'lib',
         camel2DashComponentName: false,
       },
@@ -93,9 +93,3 @@ root.render(
     },
   },
 ```
-
-### 检测登录态
-
-当内置接口检测未登录时，会弹出框提示，点击确定后会跳转到登录页进行登录，登录后会跳转到选择租户页面，选择租户后会跳转到原页面。
-
-注意：生产环境下也会检测登录态，但不会弹出框提示，而是直接跳转到登录页。

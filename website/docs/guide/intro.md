@@ -1,10 +1,8 @@
 ---
-sidebar_position: 1
+order: 2
 ---
 
-# 介绍
-
-Positive Map of React 基于 React 18 + Antd 5 的业务组件库。
+# 周边介绍
 
 ## 主题方案
 
@@ -15,3 +13,5 @@ Positive Map of React 基于 React 18 + Antd 5 的业务组件库。
 待补充
 
 ## 示例项目
+
+在 create-react-app 中使用，可参考[示例项目]

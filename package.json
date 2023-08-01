@@ -9,12 +9,12 @@
     "vite"
   ],
   "scripts": {
-    "release:beta": "lerna publish --dist-tag beta",
-    "release": "lerna publish",
+    "release": "lerna publish --force-publish --tag-version-prefix=''",
+    "release:beta": "lerna publish --dist-tag beta --tag-version-prefix=''",
+    "start": "lerna run --scope website dev",
     "postinstall": "npm run bootstrap",
     "bootstrap": "lerna bootstrap",
     "prepare": "husky install",
-    "start": "lerna run --scope ui-website start",
     "build": "lerna run --scope @positive-map/rc-utils build && lerna run --scope @positive-map/rc-components build",
     "clean": "rimraf packages/*/package-lock.json && rimraf website/package-lock.json && rimraf package-lock.json && rimraf packages/*/node_modules && rimraf website/node_modules && rimraf node_modules"
   },

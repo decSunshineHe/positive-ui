@@ -1,12 +1,12 @@
 {
-  // This file is not used in compilation. It is here just for a nice editor experience.
-  "extends": "@tsconfig/docusaurus/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "baseUrl": "./",
     "paths": {
-      "@positive-map/rc-components": ["../packages/components/src"],
-      "@positive-map/rc-utils": ["../packages/utils/src"]
+      "@@/*": [".dumi/tmp/*"]
     }
   },
-  "include": ["src/", "demo/"]
+  "include": [".dumi/**/*", ".dumirc.ts"]
 }
